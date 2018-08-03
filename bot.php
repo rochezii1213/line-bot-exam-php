@@ -17,6 +17,14 @@
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
         replyMsg($arrayHeader,$arrayPostData);
     }
+
+    if($message == "เจ๊หน่อย"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ขี้โม้ ขี้โม้ ขี้โม้ ขี้โม้ ขี้โม้ ขี้โม้ ขี้โม้ ขี้โม้ ขี้โม้ ";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
     #ตัวอย่าง Message Type "Sticker"
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
