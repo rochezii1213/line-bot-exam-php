@@ -18,7 +18,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
 
-    if($message == "เจ๊หน่อย"){
+    if($message == "..."){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ขี้โม้ ขี้โม้ ขี้โม้ ขี้โม้ ขี้โม้ ขี้โม้ ขี้โม้ ขี้โม้ ขี้โม้ ";
@@ -34,7 +34,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Image"
-    else if($message == "รูปน้องแมว"){
+    else if($message == "แมว"){
         $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
