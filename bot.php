@@ -18,6 +18,13 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
 
+    if($message == "เจ๊พลอย"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "เด๋อ เด๋อ เด๋อ เด๋อ เด๋อ เด๋อ เด๋อ เด๋อ เด๋อ เด๋อ เด๋อ เด๋อ เด๋อ เด๋อ ";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
     if($message == "..."){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
